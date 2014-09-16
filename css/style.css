@@ -39,8 +39,8 @@
 	vertical-align: middle;
 }
 
-.dropdown-menu div.items{
-	padding: 0 15px;
+.dropdown-menu li.items{
+	padding: 0 ;
 }
 .user{
  	background: #13d0ca;
@@ -54,6 +54,8 @@
  	width: 50px;
 }
 .funciones aside{
+	color: #696969;
+	font-size: 1em;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -219,18 +221,18 @@ nav.menuprincipal{
 	padding:10px 5px;
 	width:12.5;
 }
-nav.menuprincipal ul{
+.menuprincipal ul{
 	list-style: none;
 	margin: 0;
 	padding:0;
 }
-nav.menuprincipal li{
+.menuprincipal li{
 	border-bottom: 1px solid #dadada;
 }
-nav.menuprincipal li:nth-last-child(1){
+.menuprincipal li:nth-last-child(1){
 	border-bottom: none;
 }
-nav.menuprincipal li a{
+.menuprincipal li a{
 	color: #8f8f8f;
 	display: block;
 	font-family: 'Quicksand', sans-serif;
@@ -240,16 +242,31 @@ nav.menuprincipal li a{
 	transition: all 0.5s;
 	width: 100%;
 }
-nav.menuprincipal li a:hover{
+.menuprincipal li a:hover{
 	background: #fff;
 	color: #087f8f;
 	text-decoration: none;
 }
-nav.menuprincipal li a div{
+.menuprincipal li a div{
 	display: inline-block;
 	font-size: 1.5em;
 	margin-right: 20px;
 }
+.menudesp{
+	display: none;
+}
+.icomenu{
+	font-size: 1.8em;
+	margin-right:  20px;
+	padding: 0;
+}
+.droprincipal{
+	padding: 10px 5px;
+}
+.droprincipal li a{
+	font-size: 1.2em;
+}
+
 @media all and (min-width:20em) and (max-width: 48em){
 	.pagedash{
 		margin: 0 auto;
@@ -257,7 +274,7 @@ nav.menuprincipal li a div{
 	}
 	.logo{
 		display: block;
-		margin: 20px auto;
+		margin: 10px auto;
 		text-align: center;
 		width: 60%;
 	}
@@ -271,6 +288,7 @@ nav.menuprincipal li a div{
 	.infouser{
 		display: block;
 		margin-top: 20px;
+		margin-bottom: 10px;
 	}
 	.datosgraf{
 		display: block;
@@ -290,7 +308,14 @@ nav.menuprincipal li a div{
 	 }
 	 .datosgraf{
 	 	display: none;
+	 	visibility: hidden;
 	 }
+	 .menudesp{
+		display: block;
+	}
+	nav.menuprincipal{
+		display: none;
+	}
 }
 @media all and (min-width:48.1em) and (max-width: 62em){
 	.pagedash{
@@ -301,7 +326,7 @@ nav.menuprincipal li a div{
 		width: 50%;
 	}
 	.infouser{
-		margin-left: 15%;
+		margin-left: 11.5%;
 	}
 }
 @media all and (min-width:62.1em) and (max-width: 72.5em){
@@ -310,7 +335,7 @@ nav.menuprincipal li a div{
 		width: 98%;
 	}
 	.infouser{
-		margin-left: 18%;
+		margin-left: 16%;
 	}
 }
 
@@ -320,7 +345,7 @@ nav.menuprincipal li a div{
 		width: 1160px;
 	}
 	.infouser{
-		margin-left: 30%;
+		margin-left: 28%;
 	}
 	footer{
 		bottom: 0;
