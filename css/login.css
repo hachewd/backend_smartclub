@@ -1,0 +1,104 @@
+body{
+	background: url(../images/bg.jpg) top center;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	padding:0;
+	margin: 0;
+}
+
+.logo{
+	display: block;
+	margin: 0px auto 25px auto;
+
+}
+.logo img{
+	width: 100%;
+}
+section[role="pageslogin"]{
+	text-align: center;
+}
+section[role="login"]{
+	background:#f8f8f8;
+	border-radius: 10px;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+	margin: 0 auto;
+	padding: 5% 10%;
+	width: 80%;
+}
+.user{
+ 	background: #13d0ca;
+ 	border-radius: 50px;
+ 	display: block;
+ 	height: 100px;
+ 	margin: 0 auto;
+ 	overflow: hidden;
+ 	width: 100px;
+}
+section[role="login"] header h2{
+	color: #6c6c6c;
+	font-weight: normal;
+	font-size: 1.8em;
+	letter-spacing: -1px;
+}
+.icondefault{
+	color: #fff;
+	font-size: 50px;
+	margin-top: 15px;
+}
+.camposlogin{
+	border:0;
+	padding: 0px 10%;
+	text-align: left;
+}
+.camposlogin label, .camposlogin input[type="text"],.camposlogin input[type="password"]{
+	display: block;
+}
+.camposlogin label{
+	font-size: 1em;
+}
+.camposlogin input{
+	border: 2px solid #aaa;
+	border-radius: 5px;
+	padding: 5px 10px;
+	width: 90%;
+}
+section[role="login"] aside a{
+	display: block;
+	font-size: 0.9em;
+	margin-bottom: 10px;
+}
+section[role="login"] aside a:hover{
+	color: #444;
+}
+.olvide{
+	color: #087f8f;
+}
+.registro{
+	color: #aa2d2a;
+}
+section[role="login"] button{
+	background:#aa2d2a;
+	border:0;
+	border-radius: 5px;
+	color: #fff;
+	padding: 10px 20px;
+}
+section[role="login"] button:hover{
+	background: #444;
+}
+@media only screen and (min-width: 380px) and (max-width: 799px) {
+	section[role="pageslogin"]{
+		width:95%;
+		margin: 50px auto; 
+	}
+	.logo{
+		width: 80%;
+	}
+}
+
+@media only screen and (min-width: 800px){
+	section[role="pageslogin"]{
+		width: 430px;
+		margin: 100px auto 50px auto;
+	}
+}

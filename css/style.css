@@ -1,103 +1,330 @@
-body{
-	background: url(../images/bg.jpg) top center;
-	font-family: 'Quicksand', sans-serif;
+.dashboard{
+	background: #ececec;
 	font-size: 16px;
-	padding:0;
-	margin: 0;
+}
+
+.logo img{
+	width: 60%;
 }
 .logo{
-	display: block;
-	margin: 0px auto 25px auto;
-
+	display:inline-block;
 }
-.logo img{
-	width: 100%;
+.logo figcaption{
+	color: #7c7c7c;
+	display:inline-block;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.25em;
+	text-transform: uppercase;
 }
-section[role="pageslogin"]{
+.dropdown a{
+	color: #087f8f;
+	font-size: 0.875em;
+}
+.infouser{
+	display: inline-block;
+	margin-top: 20px;
 	text-align: center;
 }
-section[role="login"]{
-	background:#f8f8f8;
-	border-radius: 10px;
-	padding: 5% 10%;
-	box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+.logout{
+	color: #9e9e9e;
+	font-size: 0.875em;
+	margin-left: 10px;
+}
 
-	width: 80%;
+.logout, .dropdown, .icon-arrow-down, .logocomercio, .logocomercio figure, .logocomercio aside, .infodata, .datosgraf, nav.menuprincipal, .contenido {
+	display:inline-block;
+	vertical-align: top;
+}
+.icon-arrow-down{
+	vertical-align: middle;
+}
+
+.dropdown-menu div.items{
+	padding: 0 15px;
 }
 .user{
  	background: #13d0ca;
  	border-radius: 50px;
- 	display: block;
- 	height: 100px;
+ 	display: inline-block;
+ 	height: 50px;
  	margin: 0 auto;
  	overflow: hidden;
- 	width: 100px;
+ 	vertical-align: middle;
+ 	text-align: center;
+ 	width: 50px;
 }
-section[role="login"] header h2{
-	color: #6c6c6c;
-	font-weight: normal;
-	font-size: 1.8em;
-	letter-spacing: -1px;
+.funciones aside{
+	display: inline-block;
+	vertical-align: middle;
 }
 .icondefault{
 	color: #fff;
-	font-size: 50px;
-	margin-top: 15px;
+	font-size:30px;
+	margin-top: 8px;
 }
-.camposlogin{
-	border:0;
-	padding: 0px 10%;
-	text-align: left;
+.import_info{
+	background: #0baec4 url(../images/linesdiag_bg.png);
 }
-.camposlogin label, .camposlogin input[type="text"],.camposlogin input[type="password"]{
-	display: block;
+.infocomercio{
+	padding: 20px 10px;
 }
-.camposlogin label{
-	font-size: 1em;
+.logocomercio{
+	margin-right: 8%;
 }
-.camposlogin input{
-	border: 2px solid #aaa;
-	border-radius: 5px;
-	padding: 5px 10px;
-	width: 90%;
+.logocomercio figure{
+	border-radius: 10px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	width: 80px;
 }
-section[role="login"] aside a{
-	display: block;
-	font-size: 0.9em;
-	margin-bottom: 10px;
+.logocomercio figure a div.edit{
+	color:#ececec;
+	background: rgba(0,0,0,0.5);
+	height:80px;
+	font-size: 0.87em;
+	left: 0;
+	padding-top: 20px;
+	position: absolute;
+	text-align: center;
+	top:-80px;
+	width: 80px; 
+	-webkit-transition: all 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.5s;
 }
-section[role="login"] aside a:hover{
-	color: #444;
+.logocomercio figure:hover a div.edit{
+	top:0;
 }
-.olvide{
+.icon-pencil{
+	color: #ececec;
+}
+.logocomercio aside{
+	color: #ececec;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 0.875em;
+	line-height: 24px;
+	margin-left: 10px;
+}
+.logocomercio aside strong{
+	font-size: 1.125em;
+	font-weight: normal;
+}
+.logocomercio aside a{
+	color: #ececec;
+}
+.infodata{
+	height: 80px;
+	position: relative;
+	width: 250px;
+}
+.infodata .icons{
+	border: 3px solid #ececec;
+	border-radius: 50px;
+	font-size: 40px;
+	height: 80px;
+	padding-top: 15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 80px;
+	z-index: 2;
+}
+.infodata .datostat{
+	color: #696969;
+	background: #ececec;
+	border-radius: 7px;
+	font-size: 0.87em;
+	height: 60px;
+	left: 40px;
+	line-height: 18px;
+	overflow: hidden;
+	padding:10px 10px 5px 50px;
+	position: absolute;
+	top: 10px;
+	width: 200px;
+	z-index: 1;
+}
+.infodata .datostat strong{
+	font-size: 1.75em;
+}
+.infodata:nth-last-child(1) .datostat{
+	padding-top:20px;
+}
+.icon-stats{
+	color: #ececec;
+	background: #8fd200;
+}
+.icon-star{
+	color: #ececec;
+	background: #ed7800;
+}
+footer{
+	background: #f6f6f6;
+}
+section[role="help"]{
+	background: #00abb9;
+	padding: 10px 0;
+}
+.politicas, .socialmedia{
+	text-align: center;
+}
+.politicas{
+	color: #828282;
+	font-size: 0.75em;
+	margin: 20px 0 10px 0;
+}
+.politicas a{
 	color: #087f8f;
 }
-.registro{
-	color: #aa2d2a;
+.politicas a:hover{
+	color: #333;
 }
-section[role="login"] button{
-	background:#aa2d2a;
-	border:0;
-	border-radius: 5px;
-	color: #fff;
-	padding: 10px 20px;
+.socialmedia{
+	margin-bottom: 15px;
 }
-section[role="login"] button:hover{
-	background: #444;
+.socialmedia a{
+	color: #087f8f;
+	font-size: 1.6em;
 }
-@media only screen and (min-width: 380px) and (max-width: 799px) {
-	section[role="pageslogin"]{
-		width:95%;
-		margin: 50px auto; 
+.socialmedia a:hover{
+	color: #333;
+	text-decoration: none;
+}
+.helpdesk{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.125em;
+}
+.helpdesk p.texthelp{
+	display: inline-block;
+	line-height: 26px;
+	margin-left: 2%;
+	vertical-align: top;
+	width: 60%;
+}
+.helpdesk p strong{
+	font-size: 1.5em;
+}
+.destacar{
+	display: inline-block;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 1.8em;
+}
+section[role="content"]{
+	padding: 2% 0;
+}
+nav.menuprincipal{
+	border: #dadada 1px solid;
+	border-radius: 10px;
+	background: #f6f6f6;
+	padding:10px 5px;
+	width:12.5;
+}
+nav.menuprincipal ul{
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+nav.menuprincipal li{
+	border-bottom: 1px solid #dadada;
+}
+nav.menuprincipal li:nth-last-child(1){
+	border-bottom: none;
+}
+nav.menuprincipal li a{
+	color: #8f8f8f;
+	display: block;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 0.875em;
+	letter-spacing: -0.02em;
+	padding: 7px 5px;
+	transition: all 0.5s;
+	width: 100%;
+}
+nav.menuprincipal li a:hover{
+	background: #fff;
+	color: #087f8f;
+	text-decoration: none;
+}
+nav.menuprincipal li a div{
+	display: inline-block;
+	font-size: 1.5em;
+	margin-right: 20px;
+}
+@media all and (min-width:20em) and (max-width: 48em){
+	.pagedash{
+		margin: 0 auto;
+		width: 95%;
 	}
 	.logo{
-		width: 80%;
+		display: block;
+		margin: 20px auto;
+		text-align: center;
+		width: 60%;
+	}
+	.logo figcaption{
+		display: block;
+		margin: 0 auto;
+	}
+	.logo img{
+		width: 100%;
+	}
+	.infouser{
+		display: block;
+		margin-top: 20px;
+	}
+	.datosgraf{
+		display: block;
+		margin: 10px auto;
+	}
+	.infodata{
+		margin: 10px 0;
+	}
+	 .helpdesk p.texthelp, .destacar{
+	 	text-align: center;
+	 	width: 90%;
+	 }
+	 .logocomercio{
+	 	display: block;
+	 	margin: 0 auto;
+	 	width: 70%;
+	 }
+	 .datosgraf{
+	 	display: none;
+	 }
+}
+@media all and (min-width:48.1em) and (max-width: 62em){
+	.pagedash{
+		margin: 0 auto;
+		width: 98%;
+	}
+	.logo{
+		width: 50%;
+	}
+	.infouser{
+		margin-left: 15%;
+	}
+}
+@media all and (min-width:62.1em) and (max-width: 72.5em){
+	.pagedash{
+		margin: 0 auto;
+		width: 98%;
+	}
+	.infouser{
+		margin-left: 18%;
 	}
 }
 
-@media only screen and (min-width: 800px){
-	section[role="pageslogin"]{
-		width: 430px;
-		margin: 100px auto 50px auto;
+@media all and (min-width:72.51em){
+	.pagedash{
+		margin: 0 auto;
+		width: 1160px;
+	}
+	.infouser{
+		margin-left: 30%;
+	}
+	footer{
+		bottom: 0;
+		position: fixed;
+		width: 100%;
 	}
 }
