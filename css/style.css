@@ -349,9 +349,28 @@ nav.menuprincipal{
 	display: inline-block;
 	font-size: 0.875em;
 	vertical-align: middle;
+	width: 50%;
 }
 .contenido fieldset .campo input{
+	border: #dadada 1px solid;
+	border-radius: 7px;
+	margin-bottom: 10px;
+	padding: 5px 10px;
 	width:90%;
+}
+.contenido fieldset button{
+	background: #be120d;
+	border: 0;
+	color: #ececec;
+	border-radius: 7px;
+	font-size: 0.75em;
+	margin-left: 150px;
+	margin-top: 2%;
+	padding: 5px 10px;
+	text-transform: uppercase;
+}
+.iconbtn{
+	font-size: 1.5em;
 }
 @media all and (min-width:20em) and (max-width: 48em){
 	.pagedash{
@@ -415,6 +434,10 @@ nav.menuprincipal{
 	}
 	.contenido fieldset .campo{
 		display: block;
+		width: 100%;
+	}
+	.contenido fieldset button{
+		margin-left: 0%;
 	}
 }
 @media all and (min-width:48.1em) and (max-width: 62em){
@@ -431,6 +454,7 @@ nav.menuprincipal{
 	.contenido{
 		width: 65%;
 	}
+
 }
 @media all and (min-width:62.1em) and (max-width: 72.5em){
 	.pagedash{
