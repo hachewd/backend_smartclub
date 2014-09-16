@@ -350,6 +350,9 @@ nav.menuprincipal{
 	font-size: 0.875em;
 	vertical-align: middle;
 }
+.contenido fieldset .campo input{
+	width:90%;
+}
 @media all and (min-width:20em) and (max-width: 48em){
 	.pagedash{
 		margin: 0 auto;
@@ -387,7 +390,7 @@ nav.menuprincipal{
 	 .logocomercio{
 	 	display: block;
 	 	margin: 0 auto;
-	 	width: 70%;
+	 	width: 90%;
 	 }
 	 .datosgraf{
 	 	display: none;
@@ -407,7 +410,12 @@ nav.menuprincipal{
 	.datainfo{
 		width: 100%;
 	}
-
+	.contenido fieldset section label{
+		text-align: left;
+	}
+	.contenido fieldset .campo{
+		display: block;
+	}
 }
 @media all and (min-width:48.1em) and (max-width: 62em){
 	.pagedash{
