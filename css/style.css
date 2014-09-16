@@ -267,6 +267,89 @@ nav.menuprincipal{
 	font-size: 1.2em;
 }
 
+/*contenido*/
+.contenido{
+	margin: 0 1% 50px 5%;
+	width: 70%;
+}
+/*.datainfo{
+	border: #dadada 1px solid;
+	border-radius: 10px;
+	background: #f6f6f6;
+	padding:10px 5px;
+	width: 95%;
+}*/
+.contenido h1{
+	color: #696969;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.125em;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	text-transform: uppercase;
+	padding: 0;
+}
+.contenido p{
+	color: #696969;
+	font-size: 0.875em;
+}
+.contenido fieldset{
+	display: block;
+	border: #dadada 1px solid;
+	border-radius: 10px;
+	background: #f6f6f6;
+	margin: 20px 0;
+	padding:10px 15px 25px 35px;
+	position: relative;
+	width: 100%;
+}
+.contenido fieldset a.edit{
+	color: #2c2c2c;
+	font-size:1.2em;
+	position: absolute;
+	right: 10px;
+	top:10px;
+}
+.contenido h2{
+	color: #087f8f;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.875em;
+	font-weight: bold;
+	margin: 10px 0 25px 0;
+	padding: 0;
+}
+.contenido h2 div.icon-cog{
+	color: #fff;
+	background: #087f8f;
+	border-radius: 40px;
+	display: inline-block;
+	font-size: 0.8em;
+	height: 45px;
+	padding-top: 12px;
+	text-align: center;
+	vertical-align: middle;
+	width: 45px;
+}
+.contenido fieldset section label{
+	color: #444444;
+	font-size: 0.81em;
+	font-weight: normal;
+	display: inline-block;
+	line-height: 25px;
+	margin-right: 2%;
+	text-align: right;
+	vertical-align: top;
+	width: 135px;
+}
+.contenido fieldset a{
+	color: #087f8f;
+	font-size: 0.875em;
+}
+.contenido fieldset .campo{
+	color:#666;
+	display: inline-block;
+	font-size: 0.875em;
+	vertical-align: middle;
+}
 @media all and (min-width:20em) and (max-width: 48em){
 	.pagedash{
 		margin: 0 auto;
@@ -316,6 +399,15 @@ nav.menuprincipal{
 	nav.menuprincipal{
 		display: none;
 	}
+	.contenido{
+		display: block;
+		margin: 0 auto;
+		width: 95%;
+	}
+	.datainfo{
+		width: 100%;
+	}
+
 }
 @media all and (min-width:48.1em) and (max-width: 62em){
 	.pagedash{
@@ -327,6 +419,9 @@ nav.menuprincipal{
 	}
 	.infouser{
 		margin-left: 11.5%;
+	}
+	.contenido{
+		width: 65%;
 	}
 }
 @media all and (min-width:62.1em) and (max-width: 72.5em){
@@ -347,9 +442,14 @@ nav.menuprincipal{
 	.infouser{
 		margin-left: 28%;
 	}
-	footer{
+
+	section[role="help"]{
+		width: 100%;
+		/*margin-bottom:135px;*/
+	}
+	/*footer{
 		bottom: 0;
 		position: fixed;
 		width: 100%;
-	}
+	}*/
 }
