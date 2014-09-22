@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Dashboard Smartclub</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="css/icons.css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript">
+$(function () {
+    $('#graphic1').highcharts({
+        chart: {
+            type: 'area'
+        },
+        title: {
+            text: 'US and USSR nuclear stockpiles'
+        },
+        subtitle: {
+            text: 'Source: <a href="http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf">' +
+                'thebulletin.metapress.com</a>'
+        },
+        xAxis: {
+            allowDecimals: false,
+            labels: {
+                formatter: function () {
+                    return this.value; // clean, unformatted number for year
+                }
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Nuclear weapon states'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000 + 'k';
+                }
+            }
+        },
+        tooltip: {
+            pointFormat: '{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+        },
+        plotOptions: {
+            area: {
+                pointStart: 1940,
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'USA',
+            data: [null, null, null, null, null, 6, 11, 32, 110, 235, 369, 640,
+                1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
+                27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
+                26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
+                24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
+                22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
+                10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
+        }, {
+            name: 'USSR/Russia',
+            data: [null, null, null, null, null, null, null, null, null, null,
+                5, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
+                4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
+                15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
+                33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
+                35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
+                21000, 20000, 19000, 18000, 18000, 17000, 16000]
+        }]
+    });
+$('#graphic2').highcharts({
+
+        chart: {
+            type: 'column'
+        },
+
+        title: {
+            text: 'Total fruit consumtion, grouped by gender'
+        },
+
+        xAxis: {
+            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+        },
+
+        yAxis: {
+            allowDecimals: false,
+            min: 0,
+            title: {
+                text: 'Number of fruits'
+            }
+        },
+
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>' +
+                    'Total: ' + this.point.stackTotal;
+            }
+        },
+
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            }
+        },
+
+        series: [{
+            name: 'John',
+            data: [5, 3, 4, 7, 2],
+            stack: 'male'
+        }, {
+            name: 'Joe',
+            data: [3, 4, 4, 2, 5],
+            stack: 'male'
+        }, {
+            name: 'Jane',
+            data: [2, 5, 6, 2, 1],
+            stack: 'female'
+        }, {
+            name: 'Janet',
+            data: [3, 0, 4, 4, 3],
+            stack: 'female'
+        }]
+    });
+});
+
+
+		</script>
+		<script src="js/highcharts.js"></script>
+<script src="js/exporting.js"></script>
+</head>
+<body class="dashboard">
+<header>
+	<section class="pagedash">
+		
+		<figure class="logo">
+			<img src="images/logo_smartclub.png"/>
+			<figcaption>Dashboard</figcaption></figure>
+		<aside class="infouser">
+			<div class="dropdown menuprincipal icomenu">
+			<a href="#" class="menudesp icon-menu" data-toggle="dropdown"></a>
+			<ul class="dropdown-menu droprincipal" role="menu">
+      			<li><a href="#"><div class="icon-cog"></div>Mi cuenta</a></li>
+				<li><a href="#"><div class="icon-shop"></div>Locales Comerciales</a></li>
+				<li><a href="#"><div class="icon-star2"></div>Promociones</a></li>
+				<li><a href="#"><div class="icon-gift"></div>Premios</a></li>
+				<li><a href="#"><div class="icon-bars"></div>Estadísticas</a></li>
+				<li><a href="#"><div class="icon-share"></div>Compartir</a></li>
+    		</ul>
+		</div>
+			<div class="dropdown">
+			  <a data-toggle="dropdown" href="#">Bienvenido(a) Esteban Corrales <div class="icon-arrow-down"></div></a>
+			  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		    	<li class="items">
+		    		<a href="#" class="funciones">
+		    			<figure class="user">
+							<div class="icondefault icon-user"></div>	
+						</figure>
+						<aside><strong>Modificar</strong><br/>datos personales</aside>
+					</a>
+			</li>
+			  </ul>
+			</div>
+			<a href="#" class="logout">Salir</a>
+		</aside>
+	</section>
+</header>
+<section class="import_info">
+	<section class="pagedash">
+		<div class="infocomercio">
+			<div class="logocomercio">
+				<figure>
+					<a href="#" class="editarlogo">
+						<img src="images/logo_default.png"/>
+						<div class="edit"><div class="icon-pencil"></div>Editar</div>
+					</a>
+				</figure>
+				<aside>
+					<p><strong>[Nombre del comercio]</strong><br/>
+						[cédula jurídica]<br/>
+					</p>
+				</aside>
+			</div>
+			<div class="datosgraf">
+				<aside class="infodata">
+					<div class="icons icon-stats"></div>
+					<div class="datostat">
+						<p><strong>10250</strong><br/>Miembros</p>
+					</div>
+				</aside>
+				<aside class="infodata">
+					<div class="icons icon-star"></div>
+					<div class="datostat">
+						<p><strong>2</strong> Promociones</p>
+					</div>
+				</aside>
+			</div>
+		</div>
+	</section>
+</section>
+<section role="content">
+	<section class="pagedash">
+		<nav class="menuprincipal">
+			<ul>
+				<li><a href="#"><div class="icon-cog"></div>Mi cuenta</a></li>
+				<li><a href="#"><div class="icon-shop"></div>Locales Comerciales</a></li>
+				<li><a href="#"><div class="icon-star2"></div>Promociones</a></li>
+				<li><a href="#"><div class="icon-gift"></div>Premios</a></li>
+				<li><a href="#"><div class="icon-bars"></div>Estadísticas</a></li>
+				<li><a href="#"><div class="icon-share"></div>Compartir</a></li>
+			</ul>
+		</nav>
+		<section class="contenido">
+			<h1>Datos de personales</h1>
+			<p>Información general de su cuenta Smartclub</p>
+			<FIELDSET><div id="graphic1" style="margin: 0 auto">
+			</div>
+			</FIELDSET>
+			<FIELDSET><div id="graphic2" style="margin: 0 auto">
+			</div>
+			</FIELDSET>
+			
+		</section>
+	</section>
+</section>
+<section role="help">
+	<section class="pagedash">
+		<article class="helpdesk"><p class="destacar">¿NECESITA AYUDA?</p>
+			<p class="texthelp">Llama a nuestra asistencia técnica galardonada las 24 horas del día, los 7 días de la semana al número <strong>+506 2524-2309</strong></p>
+		</article>
+	</section>
+</section>
+<footer>
+	<section class="pagedash">
+		<aside class="politicas">
+			<p>El uso de este sitio está sujeto a las condiciones de uso expresas. Al utilizar este sitio, tú indicas que aceptas cumplir <br/>con estos <a href="#">Términos universales de servicio</a>.  <a href="#">Política de privacidad</a></p>
+
+			<p><strong>Copyright©  2014 Smartclub</strong>. Todos los derechos reservados.</p>
+		</aside>
+		<div class="socialmedia">
+			<a href="#" class="icon-twitter"></a>
+			<a href="#" class="icon-facebook"></a>
+		</div>
+	</section>
+	
+</footer>
+</body>
+</html>
