@@ -23,7 +23,8 @@
 $(function () {
     $('#graphic1').highcharts({
         chart: {
-            type: 'area'
+            type: 'area',
+            renderTo: 'container',
         },
         title: {
             text: 'US and USSR nuclear stockpiles'
@@ -161,6 +162,7 @@ $('#graphic2').highcharts({
 			<a href="#" class="menudesp icon-menu" data-toggle="dropdown"></a>
 			<ul class="dropdown-menu droprincipal" role="menu">
       			<li><a href="#"><div class="icon-cog"></div>Mi cuenta</a></li>
+      			<li><a href="#"><div class="icon-briefcase"></div>Mi Comercio</a></li>
 				<li><a href="#"><div class="icon-shop"></div>Locales Comerciales</a></li>
 				<li><a href="#"><div class="icon-star2"></div>Promociones</a></li>
 				<li><a href="#"><div class="icon-gift"></div>Premios</a></li>
@@ -223,6 +225,7 @@ $('#graphic2').highcharts({
 		<nav class="menuprincipal">
 			<ul>
 				<li><a href="#"><div class="icon-cog"></div>Mi cuenta</a></li>
+				<li><a href="#"><div class="icon-shop"></div>Mi Comercio</a></li>
 				<li><a href="#"><div class="icon-shop"></div>Locales Comerciales</a></li>
 				<li><a href="#"><div class="icon-star2"></div>Promociones</a></li>
 				<li><a href="#"><div class="icon-gift"></div>Premios</a></li>
@@ -233,10 +236,11 @@ $('#graphic2').highcharts({
 		<section class="contenido">
 			<h1>Datos de personales</h1>
 			<p>Información general de su cuenta Smartclub</p>
-			<FIELDSET><div id="graphic1" style="margin: 0 auto">
+			<FIELDSET>
+				<div id="graphic1" style="margin: 0 auto; width:100%">
 			</div>
 			</FIELDSET>
-			<FIELDSET><div id="graphic2" style="margin: 0 auto">
+			<FIELDSET><div id="graphic2" style="margin: 0 auto; width:100%">
 			</div>
 			</FIELDSET>
 			
