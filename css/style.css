@@ -374,7 +374,6 @@ nav.menuprincipal{
 .contenido fieldset .campofile input{
 	border: #dadada 1px solid;
 	border-radius: 7px;
-	margin-top: 10px;
 	padding: 5px 10px;
 }
 .fileUpload input.upload {
@@ -484,6 +483,10 @@ nav.menuprincipal{
 		text-align: left;
 	}
 	.contenido fieldset .campo{
+		display: block;
+		width: 100%;
+	}
+	.contenido fieldset .campofile{
 		display: block;
 		width: 100%;
 	}
